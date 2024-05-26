@@ -26,7 +26,6 @@ export default class Bird extends cc.Component {
     public game: GameControl
 
     onLoad () {
-        cc.director.getCollisionManager().enabled = true;
         this.resetBird();
         this.birdAnimation = this.getComponent(cc.Animation);
         this.game = cc.find('GameControl').getComponent(GameControl);
@@ -59,7 +58,6 @@ export default class Bird extends cc.Component {
     
 
     onCollisionEnter(other, self){
-        console.log("collisionEnter")
         this.hitSomething = true;
         this.game.birdStruck();
     }
