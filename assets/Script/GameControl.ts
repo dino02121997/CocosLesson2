@@ -120,18 +120,6 @@ export default class GameControl extends cc.Component {
         this.pipeQueue.addPool();
     }
 
-    contactGroundPipe(){
-        let collider = this.bird.getComponent(cc.Collider);
-        if(collider){
-            collider.node.on('', this.onBeginContact , this);
-            
-        }
-    }
-
-    onBeginContact(selfContact: cc.Collider, otherContact: cc.Collider, contact: cc.PhysicsContact | null){
-        this.bird.hitSomething = true;
-    }
-
     birdStruck() {
         this.gameOver();
     }
