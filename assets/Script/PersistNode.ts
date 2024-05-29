@@ -16,7 +16,6 @@ export default class PersistNode extends cc.Component {
     loadingText: cc.Label = null;
     
 
-    // LIFE-CYCLE CALLBACKS:
     public game: GameControl;
     onLoad() {
         cc.game.addPersistRootNode(this.node)
