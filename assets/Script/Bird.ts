@@ -6,6 +6,7 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import GameControl from "./GameControl";
+import StorageUser from "./StorageUser";
 
 const {ccclass, property} = cc._decorator;
 
@@ -17,7 +18,10 @@ export default class Bird extends cc.Component {
 
     @property(cc.Float)
     public jumpDuration: number = 3.5;
- 
+    
+    @property(cc.Label)
+    birdName: cc.Label = null;
+    
     public birdAnimation: cc.Animation;
     public birdLocation: cc.Vec3;
     public hitSomething: boolean;
@@ -26,6 +30,7 @@ export default class Bird extends cc.Component {
     public game: GameControl
 
     onLoad () {
+        this.birdName.string =  StorageUser.getInstance().userData?.name;
         this.resetBird();
         this.birdAnimation = this.getComponent(cc.Animation);
         this.game = cc.find('GameControl').getComponent(GameControl);
