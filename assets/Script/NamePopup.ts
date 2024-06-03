@@ -7,6 +7,8 @@
 
 import StorageUser from "./StorageUser";
 
+
+
 const {ccclass, property} = cc._decorator;
 
 @ccclass

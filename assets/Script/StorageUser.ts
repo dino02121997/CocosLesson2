@@ -27,6 +27,7 @@ export default class StorageUser extends cc.Component {
         if (!StorageUser.instance) {
           let node = new cc.Node("StorageUser");
           StorageUser.instance = node.addComponent(StorageUser);
+          
           cc.game.addPersistRootNode(StorageUser.instance.node);
         }
         return StorageUser.instance;

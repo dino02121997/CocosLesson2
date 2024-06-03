@@ -5,8 +5,8 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
+import StorageUser from "../../Script/StorageUser";
 import GameControl from "./GameControl";
-import StorageUser from "./StorageUser";
 
 const {ccclass, property} = cc._decorator;
 
